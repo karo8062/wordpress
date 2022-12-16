@@ -9,7 +9,7 @@
 get_header();
 
 do_action( 'hestia_before_single_page_wrapper' );
-
+?>
 <div class="<?php echo hestia_layout(); ?>">
 <main> 
 	<article class="single_template">
@@ -22,6 +22,7 @@ do_action( 'hestia_before_single_page_wrapper' );
         <button class="forspørgsel">SEND FORESPØRGSEL</button>
       </section>
 </article>
+
 </main>
 <script>
 // Søger efter ID
@@ -62,7 +63,6 @@ document.querySelector(".pris").innerHTML = "Pris " + vaerk.pris + " Kr.";
       }
 
 </script>
-
 
 </div>
 	<?php get_footer(); ?>
