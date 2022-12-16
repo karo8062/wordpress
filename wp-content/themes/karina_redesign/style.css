@@ -1,0 +1,143 @@
+/*
+Theme Name: karina redesign
+Template: hestia
+Version: 1
+Author: gruppe 12
+Description: gruppe 12 eksamensprojekt
+*/
+
+/*---------------------- HEADER ---------------------- */
+
+/*---------------------- SHOP - INDHOLD ---------------------- */
+
+/******* OVERSKRIFTER *********/
+.shop_overskrift {
+  font-family: moret;
+  text-align: center;
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 5rem;
+}
+.filtreringsoverskrift {
+  font-family: moret;
+  text-align: center;
+  color: white;
+}
+
+/* FONTS */
+p {
+  font-family: apparat;
+}
+h1,
+h2 {
+  font-family: moret;
+}
+
+/****** FILTRERINGS-MENUEN ********/
+#filtreringsmenu {
+  text-align: center;
+  font-family: apparat;
+  border-style: hidden;
+  background-color: transparent;
+}
+button {
+  font-family: apparat;
+  border-style: hidden;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  color: white;
+  margin: 3rem;
+  font-size: 20px;
+}
+
+/****** BAGGRUNDSFARVE ********/
+/*body.admin-bar .navbar-default:not(.navbar-transparent)*/
+.container {
+  width: auto;
+  margin: 0 0 0 0;
+}
+.container,
+body {
+  background: hsla(138, 11%, 47%, 1);
+
+  background: linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
+
+  background: -moz-linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
+}
+
+/* 
+  background: -webkit-linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#6B8573", endColorstr="#EEE1CE", GradientType=1 ); */
+
+/***** STRUKTURERING AF INDHOLD ****/
+
+.billede {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1.2;
+}
+
+#indholdvaerker {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+#indholdvaerker article {
+  background-color: #829180;
+  margin: 4rem;
+}
+
+.læs {
+  align-self: center;
+}
+
+/*---------------------- Galleri - INDHOLD ---------------------- */
+
+/******* OVERSKRIFT *********/
+.hestia-title.title-in-content {
+  font-family: moret;
+  font-size: 5rem;
+  text-align: center;
+  color: white;
+}
+
+/* ***** BAGGRUNDSFARVE ********/
+.blog-post {
+  background: hsla(138, 11%, 47%, 1);
+
+  background: linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
+
+  background: -moz-linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
+}
+/* background: -webkit-linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#6B8573", endColorstr="#EEE1CE", GradientType=1 ); */
+
+/*---------------------- Kontakt - INDHOLD ---------------------- */
+
+/******* OVERSKRIFT *********/
+.elementor-heading-title.elementor-size-default {
+  font-family: moret;
+  font-size: 5rem;
+  color: white;
+}
+
+/* ***** BAGGRUNDSFARVE ********/
+.page {
+  background: hsla(138, 11%, 47%, 1);
+
+  background: linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
+
+  background: -moz-linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
+}
+
+/*---------------------- Footer ---------------------- */
+footer.footer.footer-black {
+  background: none;
+}
+.footer-big {
+  padding: 0;
+}
