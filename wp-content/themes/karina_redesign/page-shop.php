@@ -111,7 +111,6 @@ klon.querySelector("h2").innerHTML = vaerk.title.rendered;
 klon.querySelector(".beskrivelse").innerHTML = vaerk.beskrivelse;
 klon.querySelector(".str").innerHTML = vaerk.str;
 klon.querySelector(".pris").innerHTML = "Pris " + vaerk.pris + " Kr.";
-
 // Lytter efter click på knappen - som siger at der skal ske det der sker i singlevaerk functionen
 klon.querySelector(".læs").addEventListener("click", () => visEnkeltVaerk(vaerk));
 
@@ -120,11 +119,11 @@ container.appendChild(klon);
 }});
 }
 
-function visEnkeltVaerk(vaerk) {
-location.href = `../page-singleview.php?id=${vaerk.id}`;
+function visEnkeltVaerk(kunst) {
+console.log(kunst);
+location.href = kunst.link;
 }
 
-hentData();
 </script>
 <?php get_footer();
 

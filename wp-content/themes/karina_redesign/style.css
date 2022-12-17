@@ -8,6 +8,52 @@ Description: gruppe 12 eksamensprojekt
 
 /*---------------------- HEADER ---------------------- */
 
+/* LOGO */
+.navbar .navbar-header .navbar-brand p {
+  margin: 2rem;
+  font-family: moret;
+  font-size: 3rem;
+}
+
+/* MENU-PUNKTER */
+a,
+.navbar .dropdown-menu li:hover > a,
+.navbar .dropdown-menu li:focus > a,
+.navbar .dropdown-menu li:active > a,
+.navbar .navbar-nav > li .dropdown-menu li:hover > a,
+body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a,
+body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a:hover,
+body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a:focus,
+a:hover,
+.card-blog a.moretag:hover,
+.card-blog a.more-link:hover,
+.widget a:hover,
+.has-text-color.has-accent-color,
+p.has-text-color a {
+  color: #829180;
+}
+a,
+.navbar .dropdown-menu li:hover > a,
+.navbar .dropdown-menu li:focus > a,
+.navbar .dropdown-menu li:active > a,
+.navbar .navbar-nav > li .dropdown-menu li:hover > a,
+body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a,
+body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a:hover,
+body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a:focus,
+a:hover,
+.card-blog a.moretag:hover,
+.card-blog a.more-link:hover,
+.widget a:hover,
+.has-text-color.has-accent-color,
+p.has-text-color a {
+  color: #829180;
+}
+
+.navbar .navbar-nav > li a {
+  color: white;
+  font-size: 17px;
+}
+
 /*---------------------- SHOP - INDHOLD ---------------------- */
 
 /******* OVERSKRIFTER *********/
@@ -17,6 +63,7 @@ Description: gruppe 12 eksamensprojekt
   color: white;
   margin-bottom: 1rem;
   font-size: 5rem;
+  margin: 5rem;
 }
 .filtreringsoverskrift {
   font-family: moret;
@@ -141,3 +188,5 @@ footer.footer.footer-black {
 .footer-big {
   padding: 0;
 }
+
+/*---------------------- SINGLE-VIEW ---------------------- */
