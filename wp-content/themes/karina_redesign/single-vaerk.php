@@ -14,12 +14,16 @@ do_action( 'hestia_before_single_page_wrapper' );
 <main> 
 	<article class="single_template">
       <section>
-       <img src="" alt="" class="billede" />
+        <div class="grid">
+        <div> <img src="" alt="" class="billede single_billede" /> </div>
+        <div>
         <h2 class="titel single_overskrift"></h2>
-        <p class="beskrivelse"></p>
+        <p class="beskrivelse single_beskrivelse"></p>
         <p class="str"></p>
         <p class="pris"></p>
-        <button class="forspørgsel" onclick="sendForespoergsel()">SEND FORESPØRGSEL</button>
+        <button class="forspørgsel single_forspørgsel" onclick="sendForespoergsel()">SEND FORESPØRGSEL</button>
+        </div>
+        </div>
       </section>
 </article>
 

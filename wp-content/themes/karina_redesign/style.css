@@ -190,3 +190,23 @@ footer.footer.footer-black {
 }
 
 /*---------------------- SINGLE-VIEW ---------------------- */
+
+/* BILLEDET */
+.single_billede {
+  max-width: 85%;
+  height: auto;
+  aspect-ratio: 1.2;
+  margin: 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 2rem;
+}
+main {
+  margin: 10rem;
+}
+.single_forspørgsel {
+  margin-top: 3rem;
+}
