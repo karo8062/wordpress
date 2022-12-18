@@ -15,11 +15,11 @@ do_action( 'hestia_before_single_page_wrapper' );
 </div>
 
 
-<main>
+<main id="shop">
 <!-- *************FILTRERINGSMENU*********** -->
 <h1 class="shop_overskrift">Shop</h1>
 <nav id="filtreringsmenu">
-    <button data-vaerktype="alle">ALLE VÆRKER</button>
+    <button data-vaerktype="alle" class="valgt">ALLE VÆRKER</button>
     <button data-vaerktype="Maleri">MALERIER</button>
     <button data-vaerktype="bronzefigurer">BRONZEFIGURER</button>
     <button data-vaerktype="vinpropper">VINPROPPER</button>
@@ -33,11 +33,11 @@ do_action( 'hestia_before_single_page_wrapper' );
     <template id="templatevaerker">
       <article>
         <img src="" alt="" class="billede" />
-        <h2 class="titel"></h2>
-        <p class="beskrivelse"></p>
-        <p class="str"></p>
         <p class="pris"></p>
+        <p class="str"></p>
+        <div class="knap_container">
         <button class="læs">LÆS MERE</button>
+        </div>
       </article>
     </template>  
 </main>
@@ -82,6 +82,12 @@ filtrer = this.dataset.vaerktype;
 // H2 overskrift, skal have samme overskrift som den valgte kategori
 overskriftFiltrering.textContent = this.textContent;
 
+ //fjern classen "valgt" fra den der var valgt
+  document.querySelector(".valgt").classList.remove("valgt");
+
+  //marker knappen der bliver klikket på
+  this.classList.add("valgt");
+
 // Kalder vis værker på ny
 visVaerker();
 }
@@ -107,10 +113,8 @@ if((filtrer == vaerk.vaerktype || filtrer == "alle")){
 const klon = temp.cloneNode(true).content;
 // Tilføje indhold til template
 klon.querySelector(".billede").src = vaerk.billede.guid;
-klon.querySelector("h2").innerHTML = vaerk.title.rendered;
-klon.querySelector(".beskrivelse").innerHTML = vaerk.beskrivelse;
-klon.querySelector(".str").innerHTML = vaerk.str;
 klon.querySelector(".pris").innerHTML = "Pris " + vaerk.pris + " Kr.";
+klon.querySelector(".str").innerHTML = "Str. " + vaerk.str;
 // Lytter efter click på knappen - som siger at der skal ske det der sker i singlevaerk functionen
 klon.querySelector(".læs").addEventListener("click", () => visEnkeltVaerk(vaerk));
 

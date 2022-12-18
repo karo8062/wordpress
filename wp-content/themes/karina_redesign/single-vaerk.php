@@ -16,7 +16,7 @@ do_action( 'hestia_before_single_page_wrapper' );
       <section>
         <div class="grid">
         <div> <img src="" alt="" class="billede single_billede" /> </div>
-        <div>
+        <div class="enkeltVaerktekst">
         <h2 class="titel single_overskrift"></h2>
         <p class="beskrivelse single_beskrivelse"></p>
         <p class="str"></p>
@@ -61,8 +61,8 @@ function visVaerk() {
   document.querySelector(".pris").textContent = "Pris " + enkeltVaerk.pris + " Kr.";
 }
 function sendForespoergsel() {
-
   location.href = "https://www.karolinethomasen.dk/kea/eksamen/send-foresporgsel";
+
 }
 
 </script>

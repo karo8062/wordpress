@@ -53,6 +53,14 @@ p.has-text-color a {
   color: white;
   font-size: 17px;
 }
+.navbar {
+  box-shadow: none;
+}
+/********* STYLING ********/
+
+.header .container {
+  border-bottom: solid 1px white;
+}
 
 /*---------------------- SHOP - INDHOLD ---------------------- */
 
@@ -62,13 +70,14 @@ p.has-text-color a {
   text-align: center;
   color: white;
   margin-bottom: 1rem;
-  font-size: 5rem;
-  margin: 5rem;
+  font-size: 6rem;
+  margin-bottom: 3rem;
 }
 .filtreringsoverskrift {
   font-family: moret;
   text-align: center;
   color: white;
+  margin: 4rem;
 }
 
 /* FONTS */
@@ -82,11 +91,20 @@ h2 {
 
 /****** FILTRERINGS-MENUEN ********/
 #filtreringsmenu {
+  display: flex;
+  /*   flex-direction: row; */
+  flex-direction: row;
   text-align: center;
   font-family: apparat;
   border-style: hidden;
   background-color: transparent;
+  justify-content: center;
 }
+
+.valgt {
+  background-color: #829180;
+}
+
 button {
   font-family: apparat;
   border-style: hidden;
@@ -96,8 +114,10 @@ button {
   margin: 3rem;
   font-size: 20px;
 }
+/***** FILTRERINGS-KNAPPER - INDHOLD *******/
 
-/****** BAGGRUNDSFARVE ********/
+/*--------------------- BAGGRUNDSFARVE - GENERALT -------------------------*/
+
 /*body.admin-bar .navbar-default:not(.navbar-transparent)*/
 .container {
   width: auto;
@@ -112,17 +132,20 @@ body {
   background: -moz-linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
 }
 
-/* 
-  background: -webkit-linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
+/***** STRUKTURERING AF INDHOLD - PÅ SHOP ****/
 
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#6B8573", endColorstr="#EEE1CE", GradientType=1 ); */
-
-/***** STRUKTURERING AF INDHOLD ****/
-
+main #shop {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  justify-content: center;
+}
 .billede {
   max-width: 100%;
   height: auto;
-  aspect-ratio: 1.2;
+  aspect-ratio: 3/2.5;
+  border-radius: 3% 3% 0% 0%;
 }
 
 #indholdvaerker {
@@ -134,11 +157,20 @@ body {
 
 #indholdvaerker article {
   background-color: #829180;
-  margin: 4rem;
+  margin: 2rem;
+  border-radius: 3% 3% 3% 3%;
+  box-shadow: 5px 5px 8px 0px rgb(0 0 0 / 50%);
 }
 
 .læs {
-  align-self: center;
+  padding: 7px 15px;
+  margin: 1rem;
+  font-size: 20px;
+}
+.knap_container {
+  display: grid;
+  place-content: center;
+  margin-bottom: 15px;
 }
 
 /*---------------------- Galleri - INDHOLD ---------------------- */
@@ -181,14 +213,6 @@ body {
   background: -moz-linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
 }
 
-/*---------------------- Footer ---------------------- */
-footer.footer.footer-black {
-  background: none;
-}
-.footer-big {
-  padding: 0;
-}
-
 /*---------------------- SINGLE-VIEW ---------------------- */
 
 /* BILLEDET */
@@ -205,8 +229,146 @@ footer.footer.footer-black {
   margin: 2rem;
 }
 main {
-  margin: 10rem;
+  margin-left: 11rem;
+  margin-right: 11rem;
 }
 .single_forspørgsel {
   margin-top: 3rem;
+}
+
+.single_billede {
+  border-radius: 0% 0% 0% 0%;
+}
+
+/* INDHOLD TIL SINGLEVIEW - STYLE */
+.single_template {
+  margin-top: 140px;
+  background-color: #829180;
+  border-radius: 17px;
+}
+/*TEKSTEN*/
+/*.enekeltVaerktekst er en div container til alt teksten*/
+.enkeltVaerktekst > .pris,
+.enkeltVaerktekst > .str {
+  text-align: left;
+}
+.enkeltVaerktekst > button {
+  margin-left: 0px;
+}
+
+/*------- KONTAKT ---------*/
+
+/*kontakt formular styling*/
+/*knap*/
+#wpforms-submit-224 {
+  width: 100%;
+}
+/*tekst felter*/
+
+.wpforms-title {
+  font-family: moret;
+}
+/*--------TAK-------*/
+
+#readmore {
+  font-family: apparat;
+  font-size: 20px;
+  font-weight: normal;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  border-radius: 0px;
+}
+/*---------------------- Footer ---------------------- */
+footer.footer.footer-black {
+  background: none;
+}
+.footer-big {
+  padding: 0;
+}
+
+/* RÆKKE OPSÆTNING */
+.footer1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: solid 1px white;
+  margin-top: 3.5rem;
+}
+
+/* FORSKELLIGE RÆKKER */
+#footer_section_1 {
+  margin: 3rem;
+  margin-top: 3.5rem;
+}
+
+#footer_section_2 {
+  text-align: center;
+  margin-top: 8rem;
+}
+
+#footer_section_3 {
+  text-align: left;
+  margin-top: 1rem;
+  margin-right: 8rem;
+}
+#footer_section_1 > p:first-of-type,
+#footer_section_3 > p:first-of-type {
+  font-weight: bold;
+}
+
+/*-------- STRUKTUR AF INDHOLD - SHOP SIDEN - MOBIL STR-------*/
+
+@media (max-width: 500px) {
+  .navbar.navbar-fixed-top .navbar-collapse {
+    background: linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
+  }
+  .navbar .navbar-nav > li {
+    border-bottom: solid 2px white;
+  }
+  #shop,
+  #indholdvaerker {
+    display: grid;
+    margin: 0 auto;
+  }
+  .shop_overskrift {
+    margin-bottom: 0em;
+  }
+  #filtreringsmenu {
+    display: flex;
+    flex-direction: column;
+    margin: 0em;
+  }
+  .filtreringsoverskrift {
+    margin-top: 1em;
+  }
+  /*------- STYLING AF SINGLEVIEW--------*/
+  .single_template {
+    margin-top: 100px;
+    background-color: transparent;
+    border-radius: 0px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+  }
+
+  .single_billede {
+    max-width: 100%;
+    margin: 0;
+  }
+  /*-------FOOTER------*/
+  .footer1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+  }
+  #footer_section_1,
+  #footer_section_2,
+  #footer_section_3 {
+    justify-self: baseline;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+  }
 }
