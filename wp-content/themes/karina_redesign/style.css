@@ -12,7 +12,8 @@ Description: gruppe 12 eksamensprojekt
 .navbar .navbar-header .navbar-brand p {
   margin: 2rem;
   font-family: moret;
-  font-size: 3rem;
+  font-size: 3.5rem;
+  width: 20ch;
 }
 
 /* MENU-PUNKTER */
@@ -309,7 +310,7 @@ footer.footer.footer-black {
 
 #footer_section_3 {
   text-align: left;
-  margin-top: 1rem;
+  margin-top: 3rem;
   margin-right: 8rem;
 }
 #footer_section_1 > p:first-of-type,
@@ -317,6 +318,31 @@ footer.footer.footer-black {
   font-weight: bold;
 }
 
+/* IKONER */
+.fa {
+  padding: 1px;
+  text-align: center;
+  margin: 1px;
+  font-size: 60px;
+  width: 30px;
+}
+.fa-facebook::before {
+  background-color: transparent;
+  color: white;
+  font-size: 30px;
+  width: 80px;
+  margin-bottom: 20px;
+}
+.fa-instagram::before {
+  background-color: transparent;
+  color: white;
+  font-size: 30px;
+  width: 80px;
+  margin-bottom: 20px;
+}
+.elementor-kit-5 a {
+  margin-bottom: 6px;
+}
 /*-------- STRUKTUR AF INDHOLD - SHOP SIDEN - MOBIL STR-------*/
 
 @media (max-width: 500px) {

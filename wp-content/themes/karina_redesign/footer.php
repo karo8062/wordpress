@@ -8,6 +8,9 @@
  * @since Hestia 1.0
  */
 ?>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+</head>
 <div class="footer1">
 
 		<div id ="footer_section_1">
@@ -17,8 +20,8 @@
 		</div>
 	
 		<div id ="footer_section_2">
-<a href="#"><img src="https://github.com/karo8062/wordpress/blob/da49943c34f0da9fbb775a4479a2be3c7e335700/wp-content/themes/karina_redesign/svg/fb_ikon.svg" width="32" height="32" alt="Facebook" /> </a>
-<a href="#"><img src="https://github.com/karo8062/wordpress/blob/da49943c34f0da9fbb775a4479a2be3c7e335700/wp-content/themes/karina_redesign/svg/insta_ikon.svg" width="32" height="32" alt="Instagram" /> </a>
+<a href="#" class="fa fa-facebook"></a>  
+<a href="#" class="fa fa-instagram"></a> 
 	
 <p>Ⓒ Karina Kejser Bøhl</p>
 <p>Mock up images by rawpixel.com on Freepik</p>
