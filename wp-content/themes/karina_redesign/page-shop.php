@@ -17,7 +17,7 @@ do_action( 'hestia_before_single_page_wrapper' );
 
 <main id="shop">
 <!-- *************FILTRERINGSMENU*********** -->
-<h1 class="shop_overskrift">Shop</h1>
+<h1 class="shop_overskrift">SHOP</h1>
 <nav id="filtreringsmenu">
     <button data-vaerktype="alle" class="valgt">ALLE VÆRKER</button>
     <button data-vaerktype="Maleri">MALERIER</button>

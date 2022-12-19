@@ -17,10 +17,11 @@
 		</div>
 	
 		<div id ="footer_section_2">
-<a href="#"><img src="" width="32" height="32" alt="Facebook" /> </a>
-<a href="#"><img src="svg/insta_ikon.svg" width="32" height="32" alt="Instagram" /> </a>
+<a href="#"><img src="https://github.com/karo8062/wordpress/blob/da49943c34f0da9fbb775a4479a2be3c7e335700/wp-content/themes/karina_redesign/svg/fb_ikon.svg" width="32" height="32" alt="Facebook" /> </a>
+<a href="#"><img src="https://github.com/karo8062/wordpress/blob/da49943c34f0da9fbb775a4479a2be3c7e335700/wp-content/themes/karina_redesign/svg/insta_ikon.svg" width="32" height="32" alt="Instagram" /> </a>
 	
 <p>Ⓒ Karina Kejser Bøhl</p>
+<p>Mock up images by rawpixel.com on Freepik</p>
 		</div>
 	
 		<div id ="footer_section_3">

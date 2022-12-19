@@ -70,7 +70,7 @@ p.has-text-color a {
   text-align: center;
   color: white;
   margin-bottom: 1rem;
-  font-size: 6rem;
+  font-size: 7rem;
   margin-bottom: 3rem;
 }
 .filtreringsoverskrift {
@@ -200,7 +200,7 @@ main #shop {
 /******* OVERSKRIFT *********/
 .elementor-heading-title.elementor-size-default {
   font-family: moret;
-  font-size: 5rem;
+  font-size: 7rem;
   color: white;
 }
 
@@ -267,6 +267,7 @@ main {
 
 .wpforms-title {
   font-family: moret;
+  font-size: 70px;
 }
 /*--------TAK-------*/
 
@@ -303,7 +304,7 @@ footer.footer.footer-black {
 
 #footer_section_2 {
   text-align: center;
-  margin-top: 8rem;
+  margin-top: 4.5rem;
 }
 
 #footer_section_3 {
@@ -341,6 +342,24 @@ footer.footer.footer-black {
   .filtreringsoverskrift {
     margin-top: 1em;
   }
+  /*------- STYLING AF MENUPUNKTERNE I BURGERMENUEN--------*/
+  .a,
+  .navbar .dropdown-menu li:hover > a,
+  .navbar .dropdown-menu li:focus > a,
+  .navbar .dropdown-menu li:active > a,
+  .navbar .navbar-nav > li .dropdown-menu li:hover > a,
+  body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a,
+  body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a:hover,
+  body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a:focus,
+  a:hover,
+  .card-blog a.moretag:hover,
+  .card-blog a.more-link:hover,
+  .widget a:hover,
+  .has-text-color.has-accent-color,
+  p.has-text-color a {
+    color: black;
+  }
+
   /*------- STYLING AF SINGLEVIEW--------*/
   .single_template {
     margin-top: 100px;
