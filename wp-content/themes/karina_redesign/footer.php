@@ -20,7 +20,7 @@
 		</div>
 	
 		<div id ="footer_section_2">
-<a href="#" class="fa fa-facebook"></a>  
+<a href="https://www.facebook.com/profile.php?id=1172657830" class="fa fa-facebook"></a>  
 <a href="#" class="fa fa-instagram"></a> 
 	
 <p>Ⓒ Karina Kejser Bøhl</p>
