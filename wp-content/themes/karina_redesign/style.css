@@ -8,7 +8,7 @@ Description: gruppe 12 eksamensprojekt
 
 /*---------------------- HEADER ---------------------- */
 
-/* LOGO */
+/***** LOGO ******/
 .navbar .navbar-header .navbar-brand p {
   margin: 2rem;
   font-family: moret;
@@ -16,7 +16,7 @@ Description: gruppe 12 eksamensprojekt
   width: 20ch;
 }
 
-/* MENU-PUNKTER */
+/**** MENU-PUNKTER *****/
 a,
 .navbar .dropdown-menu li:hover > a,
 .navbar .dropdown-menu li:focus > a,
@@ -91,6 +91,7 @@ h2 {
 }
 
 /****** FILTRERINGS-MENUEN ********/
+
 #filtreringsmenu {
   display: flex;
   /*   flex-direction: row; */
@@ -114,22 +115,6 @@ button {
   color: white;
   margin: 3rem;
   font-size: 20px;
-}
-
-/*--------------------- BAGGRUNDSFARVE - GENERALT -------------------------*/
-
-/*body.admin-bar .navbar-default:not(.navbar-transparent)*/
-.container {
-  width: auto;
-  margin: 0 0 0 0;
-}
-.container,
-body {
-  background: hsla(138, 11%, 47%, 1);
-
-  background: linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
-
-  background: -moz-linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
 }
 
 /***** STRUKTURERING AF INDHOLD - PÅ SHOP ****/
@@ -180,7 +165,23 @@ main #shop {
   margin-bottom: 15px;
 }
 
-/*---------------------- Galleri - INDHOLD ---------------------- */
+/*--------------------- BAGGRUNDSFARVE - GENERALT -------------------------*/
+
+/*body.admin-bar .navbar-default:not(.navbar-transparent)*/
+.container {
+  width: auto;
+  margin: 0 0 0 0;
+}
+.container,
+body {
+  background: hsla(138, 11%, 47%, 1);
+
+  background: linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
+
+  background: -moz-linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
+}
+
+/*---------------------- GALLERI - INDHOLD ---------------------- */
 
 /******* OVERSKRIFT *********/
 .hestia-title.title-in-content {
@@ -198,11 +199,8 @@ main #shop {
 
   background: -moz-linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
 }
-/* background: -webkit-linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
 
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#6B8573", endColorstr="#EEE1CE", GradientType=1 ); */
-
-/*---------------------- Kontakt - INDHOLD ---------------------- */
+/*---------------------- KONTAKT - INDHOLD ---------------------- */
 
 /******* OVERSKRIFT *********/
 .elementor-heading-title.elementor-size-default {
@@ -229,7 +227,7 @@ main #shop {
   aspect-ratio: 1.2;
   margin: 3rem;
 }
-
+/* OPSÆTNINGEN AF INDHOLDET */
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -254,7 +252,8 @@ main {
   border-radius: 17px;
 }
 /*TEKSTEN*/
-/*.enekeltVaerktekst er en div container til alt teksten*/
+
+/* .EnekeltVaerktekst er en div container til alt teksten */
 .enkeltVaerktekst > .pris,
 .enkeltVaerktekst > .str {
   text-align: left;
@@ -276,6 +275,7 @@ main {
   font-family: moret;
   font-size: 70px;
 }
+
 /*--------TAK-------*/
 
 #readmore {
@@ -286,7 +286,9 @@ main {
   border-bottom: 2px solid white;
   border-radius: 0px;
 }
-/*---------------------- Footer ---------------------- */
+
+/*---------------------- FOOTER ---------------------- */
+
 footer.footer.footer-black {
   background: none;
 }
@@ -303,7 +305,8 @@ footer.footer.footer-black {
   margin-top: 3.5rem;
 }
 
-/* FORSKELLIGE RÆKKER */
+/* 3 FORSKELLIGE KOLONER/RÆKKER */
+
 #footer_section_1 {
   margin: 3rem;
   margin-top: 3.5rem;
@@ -349,7 +352,10 @@ footer.footer.footer-black {
 .elementor-kit-5 a {
   margin-bottom: 6px;
 }
-/*-------- STRUKTUR AF INDHOLD - SHOP SIDEN - MOBIL STR-------*/
+
+/* ----------------------  MOBIL VERSION ---------------------- */
+
+/* STRUKTUR AF INDHOLD - SHOP SIDEN */
 
 @media (max-width: 500px) {
   .navbar.navbar-fixed-top .navbar-collapse {
@@ -386,11 +392,6 @@ footer.footer.footer-black {
     box-shadow: 5px 5px 8px 0px rgb(0 0 0 / 50%);
   }
 }
-/* BURGERMENU */
-.navbar button.navbar-toggle,
-.navbar button.navbar-toggle:hover {
-  color: white;
-}
 
 @media (max-width: 500px) {
   .navbar-default .navbar-nav > li > a:hover,
@@ -401,53 +402,59 @@ footer.footer.footer-black {
   .navbar .navbar-nav li:hover > a i {
     color: white;
   }
-}
 
-/*------- STYLING AF MENUPUNKTERNE I BURGERMENUEN--------*/
-.a,
-.navbar .dropdown-menu li:hover > a,
-.navbar .dropdown-menu li:focus > a,
-.navbar .dropdown-menu li:active > a,
-.navbar .navbar-nav > li .dropdown-menu li:hover > a,
-body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a,
-body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a:hover,
-body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a:focus,
-a:hover,
-.card-blog a.moretag:hover,
-.card-blog a.more-link:hover,
-.widget a:hover,
-.has-text-color.has-accent-color,
-p.has-text-color a {
-  color: black;
-}
+  /*------- STYLING AF SINGLEVIEW--------*/
 
-/*------- STYLING AF SINGLEVIEW--------*/
-.single_template {
-  margin-top: 100px;
-  background-color: transparent;
-  border-radius: 0px;
-}
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  place-content: center;
-}
+  .single_template {
+    margin-top: 100px;
+    background-color: transparent;
+    border-radius: 0px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+  }
 
-.single_billede {
-  max-width: 100%;
-  margin: 0;
-}
-/*-------FOOTER------*/
-.footer1 {
-  display: grid;
-  grid-template-columns: 1fr;
-  place-content: center;
-}
-#footer_section_1,
-#footer_section_2,
-#footer_section_3 {
-  justify-self: baseline;
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 1.5rem;
+  .single_billede {
+    max-width: 100%;
+    margin: 0;
+  }
+  /*-------FOOTER------*/
+  .footer1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+  }
+  #footer_section_1,
+  #footer_section_2,
+  #footer_section_3 {
+    justify-self: baseline;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+  }
+
+  /*------- STYLING AF MENUPUNKTERNE I BURGERMENUEN--------*/
+  .a,
+  .navbar .dropdown-menu li:hover > a,
+  .navbar .dropdown-menu li:focus > a,
+  .navbar .dropdown-menu li:active > a,
+  .navbar .navbar-nav > li .dropdown-menu li:hover > a,
+  body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a,
+  body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a:hover,
+  body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a:focus,
+  a:hover,
+  .card-blog a.moretag:hover,
+  .card-blog a.more-link:hover,
+  .widget a:hover,
+  .has-text-color.has-accent-color,
+  p.has-text-color a {
+    color: black;
+  }
+  /* BURGERMENU */
+  .navbar button.navbar-toggle,
+  .navbar button.navbar-toggle:hover {
+    color: white;
+  }
 }

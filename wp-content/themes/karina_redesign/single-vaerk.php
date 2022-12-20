@@ -29,18 +29,6 @@ do_action( 'hestia_before_single_page_wrapper' );
 
 </main>
 <script>
-/* const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get("titel");
-console.log(id);
-
-const endpoint = "https://www.karolinethomasen.dk/kea/eksamen/wp-json/wp/v2/vaerk/" + id;
-const options = {
-      headers: {
-    //  "Content-Type": "application/json",
-     "x-apikey": "e32135fd3f44",
-    },
-    };  */
-
     let enkeltVaerk;
 /* console.log("ID", id); */
 document.addEventListener("DOMContentLoaded", hentVaerk);
@@ -64,6 +52,5 @@ function sendForespoergsel() {
   location.href = "https://www.karolinethomasen.dk/kea/eksamen/send-foresporgsel";
 
 }
-
 </script>
 	<?php get_footer(); ?>

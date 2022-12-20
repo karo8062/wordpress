@@ -11,12 +11,11 @@ get_header();
 do_action( 'hestia_before_single_page_wrapper' );
 ?>
 <div class="<?php echo hestia_layout(); ?>">
-	
 </div>
-
 
 <main id="shop">
 <!-- *************FILTRERINGSMENU*********** -->
+
 <h1 class="shop_overskrift">SHOP</h1>
 <nav id="filtreringsmenu">
     <button data-vaerktype="alle" class="valgt">ALLE VÆRKER</button>
@@ -44,6 +43,7 @@ do_action( 'hestia_before_single_page_wrapper' );
 
 <script>
 // ***************** HENTER DATA ************************
+
 document.addEventListener("DOMContentLoaded", getJson);
 // Finder URL til json
 siteUrl = "https://www.karolinethomasen.dk/kea/eksamen/wp-json/wp/v2/vaerk?per_page=100"
@@ -60,8 +60,8 @@ vaerker = await response.json();
 visVaerker();
 }
 
-
 // ****************** FILTRERING **************************
+
 // Laver konstant der gør at vi får fat i knapperne
 const filterKnapper = document.querySelectorAll("nav button");
 
@@ -108,6 +108,7 @@ container.innerHTML ="";
 vaerker.forEach((vaerk) => {
 // Laver "if-sætning" for at filtrer mellem den værktype man har valgt. Ellers skal man se "alle"   
 if((filtrer == vaerk.vaerktype || filtrer == "alle"))
+
   // Filtrere bestemt kun efter malerier - da de får en class
  if((vaerk.vaerktype == "Maleri"))
 {
@@ -116,6 +117,7 @@ const klon = temp.cloneNode(true).content;
 klon.querySelector(".billede").src = vaerk.billede.guid;
 klon.querySelector(".pris").innerHTML = "Pris " + vaerk.pris + " Kr.";
 klon.querySelector(".str").innerHTML = "Str. " + vaerk.str;
+// Tilføjer en class til billedet, da vi gerne KUN vil ændre størrelsen på maleri-billederne (vi vil gerne have dem kvadratiske)
 klon.querySelector(".billede").classList.add("maleri_kvadrat");
 // Lytter efter click på knappen - som siger at der skal ske det der sker i singlevaerk functionen
 klon.querySelector(".læs").addEventListener("click", () => visEnkeltVaerk(vaerk));
@@ -123,9 +125,9 @@ klon.querySelector(".læs").addEventListener("click", () => visEnkeltVaerk(vaerk
 // Indholdet der kommer ind i sektion
 container.appendChild(klon);
 }
+// Hvis if påstanden ikke bliver opflyldt, så kører den næste kodesnippet igennem istedet. 
 else
 {
-
 // Laver klon til indholdet 
 const klon = temp.cloneNode(true).content;
 // Tilføje indhold til template
@@ -139,12 +141,10 @@ klon.querySelector(".læs").addEventListener("click", () => visEnkeltVaerk(vaerk
 container.appendChild(klon);
 }});
 }
-
+// Fører os videre til det enkelte værk, man klikker ind på. 
 function visEnkeltVaerk(kunst) {
-console.log(kunst);
 location.href = kunst.link;
 }
-
 </script>
 <?php get_footer();
 

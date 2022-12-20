@@ -38,6 +38,7 @@ if ( (bool) $hide_top_bar === false ) {
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
 	<?php wp_head(); ?>
+<!-- TYPOGRAFIER TIL BÅDE OVERSKRIFTEN OG BRØDTEKST -->
 <link rel="stylesheet" href="https://use.typekit.net/wku3hbf.css">
 <link rel="stylesheet" href="https://use.typekit.net/qgm5xmg.css">
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/style.css ">
