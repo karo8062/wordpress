@@ -107,7 +107,24 @@ container.innerHTML ="";
 // For hver enkelt værk tager den fat i hver enkel
 vaerker.forEach((vaerk) => {
 // Laver "if-sætning" for at filtrer mellem den værktype man har valgt. Ellers skal man se "alle"   
-if((filtrer == vaerk.vaerktype || filtrer == "alle")){
+if((filtrer == vaerk.vaerktype || filtrer == "alle"))
+  // Filtrere bestemt kun efter malerier - da de får en class
+ if((vaerk.vaerktype == "Maleri"))
+{
+const klon = temp.cloneNode(true).content;
+// Tilføje indhold til template
+klon.querySelector(".billede").src = vaerk.billede.guid;
+klon.querySelector(".pris").innerHTML = "Pris " + vaerk.pris + " Kr.";
+klon.querySelector(".str").innerHTML = "Str. " + vaerk.str;
+klon.querySelector(".billede").classList.add("maleri_kvadrat");
+// Lytter efter click på knappen - som siger at der skal ske det der sker i singlevaerk functionen
+klon.querySelector(".læs").addEventListener("click", () => visEnkeltVaerk(vaerk));
+
+// Indholdet der kommer ind i sektion
+container.appendChild(klon);
+}
+else
+{
 
 // Laver klon til indholdet 
 const klon = temp.cloneNode(true).content;
