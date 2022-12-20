@@ -7,12 +7,13 @@
  */
 
 get_header();
-
 do_action( 'hestia_before_single_page_wrapper' );
 ?>
 
-<main> 
+
+<main class="main_single"> 
 	<article class="single_template">
+		<button class="tilbage_bt">Tilbage</button>
       <section>
         <div class="grid">
         <div> <img src="" alt="" class="billede single_billede" /> </div>
@@ -47,10 +48,16 @@ function visVaerk() {
   document.querySelector(".beskrivelse").textContent = enkeltVaerk.beskrivelse;
   document.querySelector(".str").textContent = enkeltVaerk.str;
   document.querySelector(".pris").textContent = "Pris " + enkeltVaerk.pris + " Kr.";
+	document.querySelector(".tilbage_bt").addEventListener("click", sendTilbage);
 }
 function sendForespoergsel() {
   location.href = "https://www.karolinethomasen.dk/kea/eksamen/send-foresporgsel";
 
 }
+	
+function sendTilbage(){
+history.back();	
+}
+
 </script>
 	<?php get_footer(); ?>

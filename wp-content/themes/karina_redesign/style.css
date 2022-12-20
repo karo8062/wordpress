@@ -70,7 +70,6 @@ p.has-text-color a {
   font-family: moret;
   text-align: center;
   color: white;
-  margin-bottom: 1rem;
   font-size: 7rem;
   margin-bottom: 3rem;
 }
@@ -83,7 +82,7 @@ p.has-text-color a {
 
 /* FONTS */
 p {
-  font-family: apparat;
+  font-family: Helvetica, sans-serif;
 }
 h1,
 h2 {
@@ -115,6 +114,9 @@ button {
   color: white;
   margin: 3rem;
   font-size: 20px;
+}
+.navbar .navbar-nav > li > a {
+  font-family: apparat;
 }
 
 /***** STRUKTURERING AF INDHOLD - PÅ SHOP ****/
@@ -209,13 +211,19 @@ body {
   color: white;
 }
 
-/* ***** BAGGRUNDSFARVE ********/
+/* *** BAGGRUNDSFARVE **** /
 .page {
   background: hsla(138, 11%, 47%, 1);
 
   background: linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
 
   background: -moz-linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
+}
+
+/*---------------------- OM - INDHOLD ---------------------- */
+.wrapper.classic-blog .section,
+.wrapper.no-content .section {
+  padding-top: 1px;
 }
 
 /*---------------------- SINGLE-VIEW ---------------------- */
@@ -391,8 +399,11 @@ footer.footer.footer-black {
     border-radius: 3% 3% 3% 3%;
     box-shadow: 5px 5px 8px 0px rgb(0 0 0 / 50%);
   }
+  .main_single {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
-
 @media (max-width: 500px) {
   .navbar-default .navbar-nav > li > a:hover,
   .navbar-default .navbar-nav > li > a:focus,
