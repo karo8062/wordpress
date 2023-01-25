@@ -103,7 +103,6 @@ h2 {
 
 /****** FILTRERINGS-MENUEN ********/
 
-
 #filtreringsmenu {
   display: flex;
   /*   flex-direction: row; */
@@ -123,7 +122,6 @@ h2 {
   color: white;
 }
 
-
 button {
   font-family: apparat;
   border-style: hidden;
@@ -135,6 +133,8 @@ button {
 }
 .navbar .navbar-nav > li > a {
   font-family: apparat;
+}
+
 .navbar .navbar-nav > li > a {
   font-family: apparat;
 }
@@ -148,13 +148,8 @@ main #shop {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   justify-content: center;
-main #shop {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  justify-content: center;
 }
+
 .billede {
   max-width: 100%;
   height: auto;
@@ -393,11 +388,12 @@ footer.footer.footer-black {
 
 .fa-instagram::before {
   background-color: transparent;
-   color: #829180;
+  color: #829180;
   font-size: 30px;
   width: 80px;
   margin-bottom: 20px;
 }
+
 .elementor-kit-5 a {
   color: #829180;
 }
