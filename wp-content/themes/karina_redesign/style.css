@@ -8,74 +8,151 @@ Description: gruppe 12 eksamensprojekt
 
 /*---------------------- HEADER ---------------------- */
 
+/***** LOGO ******/
+.navbar .navbar-header .navbar-brand p {
+  margin: 2rem;
+  font-family: moret;
+  font-size: 3.5rem;
+  width: 20ch;
+  color: #829180;
+}
+
+/**** MENU-PUNKTER *****/
+a,
+.navbar .dropdown-menu li:hover > a,
+.navbar .dropdown-menu li:focus > a,
+.navbar .dropdown-menu li:active > a,
+.navbar .navbar-nav > li .dropdown-menu li:hover > a,
+body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a,
+body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a:hover,
+body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a:focus,
+a:hover,
+.card-blog a.moretag:hover,
+.card-blog a.more-link:hover,
+.widget a:hover,
+.has-text-color.has-accent-color,
+p.has-text-color a {
+  color: #829180;
+}
+a,
+.navbar .dropdown-menu li:hover > a,
+.navbar .dropdown-menu li:focus > a,
+.navbar .dropdown-menu li:active > a,
+.navbar .navbar-nav > li .dropdown-menu li:hover > a,
+body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a,
+body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a:hover,
+body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a:focus,
+a:hover,
+.card-blog a.moretag:hover,
+.card-blog a.more-link:hover,
+.widget a:hover,
+.has-text-color.has-accent-color,
+p.has-text-color a {
+  color: #829180;
+}
+
+.navbar .navbar-nav > li a {
+  color: #829180;
+  font-size: 17px;
+}
+.navbar {
+  box-shadow: none;
+}
+/********* STYLING ********/
+
+.header .container {
+  border-bottom: solid 1px #829180;
+}
+
 /*---------------------- SHOP - INDHOLD ---------------------- */
 
 /******* OVERSKRIFTER *********/
 .shop_overskrift {
   font-family: moret;
   text-align: center;
-  color: white;
-  margin-bottom: 1rem;
-  font-size: 5rem;
+
+  color: #829180;
+  font-size: 7rem;
+  margin-bottom: 3rem;
 }
 .filtreringsoverskrift {
   font-family: moret;
   text-align: center;
-  color: white;
+  color: #829180;
+  margin: 4rem;
 }
 
 /* FONTS */
 p {
-  font-family: apparat;
+  font-family: Helvetica, sans-serif;
 }
+
+.pris,
+.str {
+  color: white;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 h1,
 h2 {
   font-family: moret;
 }
 
 /****** FILTRERINGS-MENUEN ********/
+
 #filtreringsmenu {
+  display: flex;
+  /*   flex-direction: row; */
+  flex-direction: row;
   text-align: center;
   font-family: apparat;
   border-style: hidden;
   background-color: transparent;
+  justify-content: center;
 }
+
+.valgt {
+  background-color: #829180;
+  color: white;
+}
+
 button {
   font-family: apparat;
   border-style: hidden;
   background-color: transparent;
-  border-bottom: 1px solid white;
-  color: white;
+  border: 1px solid #829180;
+  color: #829180;
   margin: 3rem;
   font-size: 20px;
 }
-
-/****** BAGGRUNDSFARVE ********/
-/*body.admin-bar .navbar-default:not(.navbar-transparent)*/
-.container {
-  width: auto;
-  margin: 0 0 0 0;
-}
-.container,
-body {
-  background: hsla(138, 11%, 47%, 1);
-
-  background: linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
-
-  background: -moz-linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
+.navbar .navbar-nav > li > a {
+  font-family: apparat;
 }
 
-/* 
-  background: -webkit-linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
+/***** STRUKTURERING AF INDHOLD - PÅ SHOP ****/
 
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#6B8573", endColorstr="#EEE1CE", GradientType=1 ); */
-
-/***** STRUKTURERING AF INDHOLD ****/
-
+main #shop {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  justify-content: center;
+}
 .billede {
   max-width: 100%;
   height: auto;
-  aspect-ratio: 1.2;
+  aspect-ratio: 3/2.5;
+  border-radius: 3% 3% 0% 0%;
+}
+
+/* Der er sat en class på billederne til shops siden, for at de kan være kvadratiske */
+.maleri_kvadrat {
+  width: 100%;
+  height: 60%;
+  border-radius: 3% 3% 0% 0%;
 }
 
 #indholdvaerker {
@@ -83,18 +160,44 @@ body {
   grid-template-columns: repeat(2, 1fr);
   margin-left: 4rem;
   margin-right: 4rem;
+  margin-bottom: 5rem;
 }
 
 #indholdvaerker article {
   background-color: #829180;
-  margin: 4rem;
+  margin: 2rem;
+  border-radius: 3% 3% 3% 3%;
+  box-shadow: 5px 5px 8px 0px rgb(0 0 0 / 50%);
 }
 
 .læs {
-  align-self: center;
+  padding: 7px 15px;
+  margin: 1rem;
+  font-size: 20px;
+  border: 1px solid white;
+  color: white;
 }
 
-/*---------------------- Galleri - INDHOLD ---------------------- */
+.læs :hover {
+  background: #829180;
+  color: white;
+}
+
+.knap_container {
+  display: grid;
+  place-content: center;
+  margin-bottom: 15px;
+}
+
+/*--------------------- BAGGRUNDSFARVE - GENERALT -------------------------*/
+
+/*body.admin-bar .navbar-default:not(.navbar-transparent)*/
+.container {
+  width: auto;
+  margin: 0 0 0 0;
+}
+
+/*---------------------- GALLERI - INDHOLD ---------------------- */
 
 /******* OVERSKRIFT *********/
 .hestia-title.title-in-content {
@@ -105,39 +208,317 @@ body {
 }
 
 /* ***** BAGGRUNDSFARVE ********/
-.blog-post {
-  background: hsla(138, 11%, 47%, 1);
 
-  background: linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
-
-  background: -moz-linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
-}
-/* background: -webkit-linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
-
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#6B8573", endColorstr="#EEE1CE", GradientType=1 ); */
-
-/*---------------------- Kontakt - INDHOLD ---------------------- */
+/*---------------------- KONTAKT - INDHOLD ---------------------- */
 
 /******* OVERSKRIFT *********/
 .elementor-heading-title.elementor-size-default {
   font-family: moret;
-  font-size: 5rem;
+  color: #829180;
+}
+
+/*---------------------- OM - INDHOLD ---------------------- */
+.wrapper.classic-blog .section,
+.wrapper.no-content .section {
+  padding-top: 1px;
+}
+
+/*---------------------- SINGLE-VIEW ---------------------- */
+
+/* BILLEDET */
+.single_billede {
+  aspect-ratio: 1.2;
+}
+/* OPSÆTNINGEN AF INDHOLDET */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 2rem;
+}
+
+main {
+  margin-left: 11rem;
+  margin-right: 11rem;
+}
+.single_forspørgsel {
+  margin-top: 3rem;
+}
+
+.single_billede {
+  border-radius: 0% 0% 0% 0%;
+}
+
+/* INDHOLD TIL SINGLEVIEW - STYLE */
+.single_template {
+  margin-top: 140px;
+  background-color: #829180;
+  border-radius: 17px;
+}
+/*TEKSTEN*/
+.grid > .enkeltVaerktekst,
+.single_beskrivelse,
+.single_forspørgsel {
   color: white;
 }
 
-/* ***** BAGGRUNDSFARVE ********/
-.page {
-  background: hsla(138, 11%, 47%, 1);
-
-  background: linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
-
-  background: -moz-linear-gradient(90deg, hsla(138, 11%, 47%, 1) 0%, hsla(36, 48%, 87%, 1) 100%);
+.single_forspørgsel {
+  border: 1px solid white;
 }
 
-/*---------------------- Footer ---------------------- */
+.single_forspørgsel:hover {
+  color: #829180;
+  background: white;
+}
+
+/* .EnekeltVaerktekst er en div container til alt teksten */
+.enkeltVaerktekst > .pris,
+.enkeltVaerktekst > .str {
+  text-align: left;
+  color: white;
+}
+.enkeltVaerktekst > button {
+  margin-left: 0px;
+}
+
+/*------- KONTAKT ---------*/
+
+/*kontakt formular styling*/
+/*knap*/
+#wpforms-submit-224 {
+  width: 100%;
+}
+/*tekst felter*/
+
+.wpforms-title {
+  font-family: moret;
+  font-size: 70px;
+}
+
+/*--------TAK-------*/
+
+#readmore {
+  font-family: apparat;
+  font-size: 20px;
+  font-weight: normal;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  border-radius: 0px;
+}
+
+/*---------------------- FOOTER ---------------------- */
+
 footer.footer.footer-black {
   background: none;
 }
 .footer-big {
   padding: 0;
+}
+
+/* RÆKKE OPSÆTNING */
+.footer1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid #829180;
+  margin-top: 0rem;
+  color: #829180;
+}
+
+/* 3 FORSKELLIGE KOLONER/RÆKKER */
+
+#footer_section_1 {
+  margin: 3rem;
+  margin-top: 3.5rem;
+}
+
+#footer_section_2 {
+  text-align: center;
+  margin-top: 4.5rem;
+}
+
+#footer_section_3 {
+  text-align: left;
+  margin-top: 3rem;
+  margin-right: 8rem;
+}
+#footer_section_1 > p:first-of-type,
+#footer_section_3 > p:first-of-type {
+  font-weight: bold;
+}
+
+/* IKONER */
+.fa {
+  padding: 1px;
+  text-align: center;
+  margin: 1px;
+  font-size: 60px;
+  width: 30px;
+  color: #829180;
+}
+
+.fa-facebook::before {
+  background-color: transparent;
+  color: #829180;
+  font-size: 30px;
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.fa-instagram::before {
+  background-color: transparent;
+   color: #829180;
+  font-size: 30px;
+  width: 80px;
+  margin-bottom: 20px;
+}
+.elementor-kit-5 a {
+  color: #829180;
+}
+
+/* ----------------------  MOBIL VERSION ---------------------- */
+
+/* STRUKTUR AF INDHOLD - SHOP SIDEN */
+
+@media (max-width: 450px) {
+  .navbar.navbar-fixed-top .navbar-collapse {
+    background: white;
+    margin-top: 100px;
+  }
+  .navbar .navbar-nav > li {
+    border-bottom: solid 2px #829180;
+  }
+
+  .navbar .navbar-nav {
+    margin: 0px -15px;
+  }
+
+  #shop,
+  #indholdvaerker {
+    display: grid;
+    margin: 0 auto;
+  }
+
+  .shop_overskrift {
+    margin-bottom: 0em;
+  }
+  #filtreringsmenu {
+    display: flex;
+    flex-direction: column;
+    margin: 0em;
+  }
+  .filtreringsoverskrift {
+    margin-top: 1em;
+  }
+  .maleri_kvadrat {
+    width: 100%;
+    height: 40%;
+    border-radius: 3% 3% 0% 0%;
+  }
+
+  #indholdvaerker article {
+    background-color: #829180;
+    margin: 1rem;
+    border-radius: 3% 3% 3% 3%;
+    box-shadow: 5px 5px 8px 0px rgb(0 0 0 / 50%);
+  }
+  .main_single {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  /* --- SINGLE VIEW --- */
+  .grid > .enkeltVaerktekst,
+  .single_beskrivelse,
+  .single_forspørgsel {
+    width: auto;
+    color: black;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 450px) {
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a:focus,
+  .navbar .navbar-nav .dropdown .dropdown-menu li a:hover,
+  .navbar .navbar-nav .dropdown .dropdown-menu li a:focus,
+  .navbar button.navbar-toggle:hover,
+  .navbar .navbar-nav li:hover > a i {
+    color: white;
+  }
+  /* ----------------------  IPAD VERSION ---------------------- */
+
+  @media (max-width: 1024px) {
+  }
+
+  /* ----------------------  DESKTOP VERSION ---------------------- */
+  @media (max-width: 1300px) {
+    .main_single {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+
+  /* ----------------------  WIDESCREEN VERSION ---------------------- */
+  @media (max-width: 2000px) {
+  }
+
+  /*------- STYLING AF SINGLEVIEW--------*/
+
+  .single_template {
+    margin-top: 100px;
+    background-color: transparent;
+    border-radius: 0px;
+  }
+
+  .single_billede {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  /*-------FOOTER------*/
+  .footer1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+    color: #829180;
+  }
+
+  #footer_section_1,
+  #footer_section_2,
+  #footer_section_3 {
+    justify-self: baseline;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+  }
+
+  /*------- STYLING AF MENUPUNKTERNE I BURGERMENUEN--------*/
+  .a,
+  .navbar .dropdown-menu li:hover > a,
+  .navbar .dropdown-menu li:focus > a,
+  .navbar .dropdown-menu li:active > a,
+  .navbar .navbar-nav > li .dropdown-menu li:hover > a,
+  body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a,
+  body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a:hover,
+  body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a:focus,
+  a:hover,
+  .card-blog a.moretag:hover,
+  .card-blog a.more-link:hover,
+  .widget a:hover,
+  .has-text-color.has-accent-color,
+  p.has-text-color a {
+    color: white;
+    background: #829180;
+    border-radius: 0px;
+  }
+
+  /* BURGERMENU */
+  .navbar button.navbar-toggle,
+  .navbar button.navbar-toggle:hover {
+    color: #829180;
+  }
 }
