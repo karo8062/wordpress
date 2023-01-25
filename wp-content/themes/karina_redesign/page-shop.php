@@ -11,15 +11,14 @@ get_header();
 do_action( 'hestia_before_single_page_wrapper' );
 ?>
 <div class="<?php echo hestia_layout(); ?>">
-	
 </div>
 
-
-<main>
+<main id="shop">
 <!-- *************FILTRERINGSMENU*********** -->
-<h1 class="shop_overskrift">Shop</h1>
+
+<h1 class="shop_overskrift">SHOP</h1>
 <nav id="filtreringsmenu">
-    <button data-vaerktype="alle">ALLE VÆRKER</button>
+    <button data-vaerktype="alle" class="valgt">ALLE VÆRKER</button>
     <button data-vaerktype="Maleri">MALERIER</button>
     <button data-vaerktype="bronzefigurer">BRONZEFIGURER</button>
     <button data-vaerktype="vinpropper">VINPROPPER</button>
@@ -33,17 +32,18 @@ do_action( 'hestia_before_single_page_wrapper' );
     <template id="templatevaerker">
       <article>
         <img src="" alt="" class="billede" />
-        <h2 class="titel"></h2>
-        <p class="beskrivelse"></p>
-        <p class="str"></p>
         <p class="pris"></p>
+        <p class="str"></p>
+        <div class="knap_container">
         <button class="læs">LÆS MERE</button>
+        </div>
       </article>
     </template>  
 </main>
 
 <script>
 // ***************** HENTER DATA ************************
+
 document.addEventListener("DOMContentLoaded", getJson);
 // Finder URL til json
 siteUrl = "https://www.karolinethomasen.dk/kea/eksamen/wp-json/wp/v2/vaerk?per_page=100"
@@ -60,8 +60,8 @@ vaerker = await response.json();
 visVaerker();
 }
 
-
 // ****************** FILTRERING **************************
+
 // Laver konstant der gør at vi får fat i knapperne
 const filterKnapper = document.querySelectorAll("nav button");
 
@@ -82,6 +82,12 @@ filtrer = this.dataset.vaerktype;
 // H2 overskrift, skal have samme overskrift som den valgte kategori
 overskriftFiltrering.textContent = this.textContent;
 
+ //fjern classen "valgt" fra den der var valgt
+  document.querySelector(".valgt").classList.remove("valgt");
+
+  //marker knappen der bliver klikket på
+  this.classList.add("valgt");
+
 // Kalder vis værker på ny
 visVaerker();
 }
@@ -101,17 +107,33 @@ container.innerHTML ="";
 // For hver enkelt værk tager den fat i hver enkel
 vaerker.forEach((vaerk) => {
 // Laver "if-sætning" for at filtrer mellem den værktype man har valgt. Ellers skal man se "alle"   
-if((filtrer == vaerk.vaerktype || filtrer == "alle")){
+if((filtrer == vaerk.vaerktype || filtrer == "alle"))
 
+  // Filtrere bestemt kun efter malerier - da de får en class
+ if((vaerk.vaerktype == "Maleri"))
+{
+const klon = temp.cloneNode(true).content;
+// Tilføje indhold til template
+klon.querySelector(".billede").src = vaerk.billede.guid;
+klon.querySelector(".pris").innerHTML = "Pris " + vaerk.pris + " Kr.";
+klon.querySelector(".str").innerHTML = "Str. " + vaerk.str;
+// Tilføjer en class til billedet, da vi gerne KUN vil ændre størrelsen på maleri-billederne (vi vil gerne have dem kvadratiske)
+klon.querySelector(".billede").classList.add("maleri_kvadrat");
+// Lytter efter click på knappen - som siger at der skal ske det der sker i singlevaerk functionen
+klon.querySelector(".læs").addEventListener("click", () => visEnkeltVaerk(vaerk));
+
+// Indholdet der kommer ind i sektion
+container.appendChild(klon);
+}
+// Hvis if påstanden ikke bliver opflyldt, så kører den næste kodesnippet igennem istedet. 
+else
+{
 // Laver klon til indholdet 
 const klon = temp.cloneNode(true).content;
 // Tilføje indhold til template
 klon.querySelector(".billede").src = vaerk.billede.guid;
-klon.querySelector("h2").innerHTML = vaerk.title.rendered;
-klon.querySelector(".beskrivelse").innerHTML = vaerk.beskrivelse;
-klon.querySelector(".str").innerHTML = vaerk.str;
 klon.querySelector(".pris").innerHTML = "Pris " + vaerk.pris + " Kr.";
-
+klon.querySelector(".str").innerHTML = "Str. " + vaerk.str;
 // Lytter efter click på knappen - som siger at der skal ske det der sker i singlevaerk functionen
 klon.querySelector(".læs").addEventListener("click", () => visEnkeltVaerk(vaerk));
 
@@ -119,12 +141,10 @@ klon.querySelector(".læs").addEventListener("click", () => visEnkeltVaerk(vaerk
 container.appendChild(klon);
 }});
 }
-
-function visEnkeltVaerk(vaerk) {
-location.href = `../page-singleview.php?id=${vaerk.id}`;
+// Fører os videre til det enkelte værk, man klikker ind på. 
+function visEnkeltVaerk(kunst) {
+location.href = kunst.link;
 }
-
-hentData();
 </script>
 <?php get_footer();
 
