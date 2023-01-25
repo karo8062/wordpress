@@ -46,7 +46,7 @@ do_action( 'hestia_before_single_page_wrapper' );
 
 document.addEventListener("DOMContentLoaded", getJson);
 // Finder URL til json
-siteUrl = "https://www.karolinethomasen.dk/kea/eksamen/wp-json/wp/v2/vaerk?per_page=100"
+siteUrl = "https://www.lauraskovsted.dk/kea/10_eksamen/redesign_eksamen/wp-json/wp/v2/vaerk?per_page=100"
 
 // Laver en variabel for vores array, hvor vi putter vores json data ind i
 let vaerker = [];
