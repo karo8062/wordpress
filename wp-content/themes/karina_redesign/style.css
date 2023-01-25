@@ -545,3 +545,192 @@ footer.footer.footer-black {
     color: #829180;
   }
 }
+
+/* ADDITIONAL CSS */
+
+h1,
+h2,
+h3 {
+  font-family: moret;
+}
+
+.pris,
+.str {
+  font-family: apparat;
+  font-size: 20px;
+  text-decoration: bold;
+  margin: 1rem;
+  text-align: center;
+}
+.pris {
+  margin-top: 30px;
+}
+
+#kontaktformular {
+  place-self: top center;
+}
+#kontakt-info-box {
+  place-self: center;
+  margin-top: 2rem;
+}
+
+.elementor-section.elementor-container {
+  gap: 20px;
+}
+
+.footer1 {
+  margin-top: -3.5rem;
+}
+
+.læs:hover {
+  background: white;
+  color: #829180;
+}
+
+body:not(.woocommerce-page)
+  button:not([class^="fl-"]):not(.hestia-scroll-to-top):not(.navbar-toggle):not(
+    .close
+  ):hover {
+  color: #829180;
+}
+
+#filtreringsmenu > button:hover {
+  color: white;
+}
+
+/* indsæt i vores egen kode */
+
+.enkeltVaerktekst {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+/*.flere_img{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-row: 2;
+	grid-column: 1;
+}
+*/
+
+.billede_2,
+.billede_3,
+.billede_4 {
+  object-fit: cover;
+  place-self: center;
+  aspect-ratio: 1.2;
+}
+
+.stort_img {
+  place-self: center;
+  aspect-ratio: 1.2;
+}
+
+.grid > .enkeltVaerktekst,
+.single_beskrivelse,
+.single_forspørgsel {
+  width: 50ch;
+}
+
+.enkeltVaerktekst {
+  padding-left: 3rem;
+}
+
+.single_beskrivelse {
+  font-size: 20px;
+}
+
+.tilbage_bt {
+  color: white;
+  border: 1px solid white;
+}
+
+.tilbage_bt:hover {
+  background: white;
+  color: #829180;
+  border: 1px solid white;
+}
+
+/* send forespørgelse */
+.elementor-536
+  .elementor-element.elementor-element-3c4f0ab
+  > .elementor-widget-container {
+  color: white;
+}
+
+/*------- STYLING AF SLIDESHOW --------*/
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+
+.mySlides {
+  display: none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 90%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.pil_frem,
+.pil_tilbage {
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  width: auto;
+  padding: 25px;
+  margin-top: -22px;
+  color: white;
+  font-size: 4rem;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.pil_frem {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.pil_frem:hover,
+.pil_tilbage:hover {
+  color: #829180;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot_container {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  margin: 2rem;
+}
+
+.dot:hover {
+  background-color: #717171;
+}
